@@ -1,5 +1,11 @@
 const { obtenerDatos, filtrarPorNombreInicial } = require('./script.js');
 
+/**
+ * Esta función simula un clic del usuario.
+ * Usa async/await para obtener datos y luego filtrarlos secuencialmente.
+ * Es más clara que usar callbacks anidados o promesas encadenadas con .then().
+ */
+
 async function simularClickUsuario() {
     console.log("\n--- Evento: clic del usuario ---");
 

@@ -1,10 +1,16 @@
 const estudiantes = [
-    { nombre: "Ana", edad: 20 },
-    { nombre: "Luis", edad: 22 },
-    { nombre: "Lucía", edad: 21 },
-    { nombre: "Pedro", edad: 19 },
-    { nombre: "Laura", edad: 23 }
+    { nombre: "Juan", edad: 20 },
+    { nombre: "Pancho", edad: 22 },
+    { nombre: "Pepe", edad: 21 },
+    { nombre: "Patricio", edad: 19 },
+    { nombre: "Micaela", edad: 18 }
 ];
+
+/**
+ * Función que simula obtener datos desde un servidor.
+ * Utiliza setTimeout para simular una demora real.
+ * Con async/await, esta función se puede usar de forma secuencial y más legible.
+ */
 
 async function obtenerDatos() {
     return new Promise((resolve, reject) => {
@@ -19,6 +25,11 @@ async function obtenerDatos() {
         }, 2000);
     });
 }
+
+/**
+ * Función que filtra estudiantes cuyo nombre inicia con una letra específica.
+ * También retorna una promesa y puede ser usada con await para evitar el anidamiento.
+ */
 
 async function filtrarPorNombreInicial(lista, letra) {
     return new Promise((resolve, reject) => {
